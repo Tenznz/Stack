@@ -32,8 +32,9 @@ public class Stack {
 	}
 
 	public void display() {
+		System.out.print("Stack:\n->");
 		for (int i = top; i > -1; i--) {
-			System.out.print(" -> " + arr[i]);
+			System.out.print(arr[i]+" -> ");
 		}
 		System.out.println();
 
