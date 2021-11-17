@@ -1,7 +1,5 @@
 package com.bridgelabz.stack;
 
-import java.util.Arrays;
-
 public class Stack {
 
 	private static final int MAX = 10;
@@ -34,11 +32,36 @@ public class Stack {
 	}
 
 	public void display() {
-		for (int i = arr.length-1; i >= 0; i--) {
+		for (int i = top; i > -1; i--) {
 			System.out.print(" -> " + arr[i]);
 		}
 		System.out.println();
 
+	}
+
+	public int pop() {
+		int data = arr[top--];
+		return data;
+	}
+
+	public int peek() {
+		if (isEmpty()) {
+			System.out.println("Stack is underflow");
+			return 0;
+		}
+		int data = arr[top];
+		return data;
+	}
+
+	private boolean isEmpty() {
+		return top < 0;
+	}
+
+	public int size() {
+		if (isEmpty()) {
+			return 0;
+		}
+		return ++top;
 	}
 
 }

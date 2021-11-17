@@ -8,5 +8,8 @@ public class Main {
 		stack.push(56);
 		System.out.println(stack.isFull()); 
 		stack.display();
+		System.out.println(stack.peek());
+		System.out.println(stack.pop());
+		stack.display();
 	}
 }
